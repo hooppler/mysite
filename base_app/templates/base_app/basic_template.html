@@ -1,0 +1,16 @@
+{% load cms_tags menu_tags sekizai_tags %}
+<html>
+    <head>
+        <title>{% page_attribute "page_title" %}</title>
+        {% render_block "css" %}
+    </head>
+    <body style="background-color: red; text-align: center;">
+        {% cms_toolbar %}
+        {% placeholder "content" %}
+        {% placeholder "sidebar" %}
+        {% render_block "js" %}
+    </body>
+    <footer>
+        {% static_placeholder 'footer' %}
+    </footer>
+</html>

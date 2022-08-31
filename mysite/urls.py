@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path, include
+from base_app import views
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
     re_path(r'^admin/', admin.site.urls),
     re_path(r'^taggit_autosuggest/', include('taggit_autosuggest.urls')),
-    re_path(r'^', include('cms.urls')),
+    re_path(r'^cms', include('cms.urls')),
+    re_path(r'^', views.home_view),
 ]

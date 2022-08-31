@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'meta',
     'sortedm2m',
     'djangocms_blog',
+    'base_app',
 ]
 
 MIDDLEWARE = [
@@ -189,6 +190,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'mysite/static',
     'mysite/static',
+    BASE_DIR / 'mysite/base_app/static',
+    'mysite/base_app/static',
 ]
 
 SITE_ID = 1
