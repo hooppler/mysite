@@ -19,5 +19,6 @@ from django.urls import path, re_path, include
 urlpatterns = [
     #path('admin/', admin.site.urls),
     re_path(r'^admin/', admin.site.urls),
+    re_path(r'^taggit_autosuggest/', include('taggit_autosuggest.urls')),
     re_path(r'^', include('cms.urls')),
 ]
