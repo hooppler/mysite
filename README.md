@@ -1,6 +1,20 @@
 # mysite
 This is DjangoCMS example repository
 
+# Developer Loal Configuration
+
+1. Clone the code.
+   > git clone git@github.com:hooppler/mysite.git
+2. Configure database settings.
+3. Make migrations.
+   > python manage.py migrate
+4. Create supperuser.
+   > python manage.py createsuperuser
+5. Add to ALLOWED_HOSTS local address (e.g. 127.0.0.1:8000) in settings.py
+6. STATICFILES_DIRS should be uncommented and setup from settings.py
+7. Run server from paretn folder of mysite
+   > python mysite/manage.py runserver
+
 ## Development
 STATIC_ROOT is useless during development, it's only required for deployment.
 
