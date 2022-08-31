@@ -11,7 +11,8 @@ This is DjangoCMS example repository
 4. Create supperuser.
    > python manage.py createsuperuser
 5. Add to ALLOWED_HOSTS local address (e.g. 127.0.0.1:8000) in settings.py
-6. Run server from paretn folder of mysite
+6. STATICFILES_DIRS should be uncommented and setup from settings.py
+7. Run server from paretn folder of mysite
    > python mysite/manage.py runserver
 
 ## Development
