@@ -8,7 +8,9 @@ This is DjangoCMS example repository
 2. Configure database settings.
 3. Make migrations.
    > python manage.py migrate
-4. Run server from paretn folder of mysite
+4. Create supperuser.
+   > python manage.py createsuperuser
+6. Run server from paretn folder of mysite
    > python mysite/manage.py runserver
 
 ## Development
