@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-p_mlin#(32u#7987)y-wid6+9)_0qs2$t%uw+-l+i-9jly7+d!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['stojimirovic.pythonanywhere.com']
+ALLOWED_HOSTS = ['stojimirovic.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -111,13 +111,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
+# DATABASES configuration only for development local installations
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
+# DATABASES configuration for production environment
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -182,6 +184,12 @@ MEDIA_ROOT = '/home/stojimirovic/mysite/media'
 MEDIA_URL = '/media/'
 STATIC_ROOT = '/home/stojimirovic/mysite/static'
 STATIC_URL = '/static/'
+
+# STATICFILES_DIRS should be removed in production. Only for local installations.
+STATICFILES_DIRS = [
+    BASE_DIR / 'mysite/static',
+    'mysite/static',
+]
 
 SITE_ID = 1
 X_FRAME_OPTIONS = 'SAMEORIGIN'
