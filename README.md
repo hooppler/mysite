@@ -1,7 +1,7 @@
 # mysite
 This is DjangoCMS example repository
 
-# Developer Loal Configuration
+## Developer Loal Configuration
 
 1. Clone the code.
    > git clone git@github.com:hooppler/mysite.git
@@ -23,6 +23,7 @@ While in development, STATIC_ROOT does nothing. You don't even need to set it. D
 This is the magic done by manage.py runserver when DEBUG=True.
 
 ## Deployment
+Current production Python version 3.9.5
 When your project goes live, things differ. Most likely you will serve dynamic content using Django and static files will be served by Nginx. Why? Because Nginx is incredibly efficient and will reduce the workload off Django.
 
 This is where STATIC_ROOT becomes handy, as Nginx doesn't know anything about your Django project and doesn't know where to find static files.
